@@ -1,0 +1,24 @@
+GUID: f0d5457f-7c43-4454-b0ed-df0bb2ffc7a1
+TipoVehiculo: 1
+Marca: tapitas
+Color: gris
+Valor: 4.5000007E7
+CedulaPropietario: 1234
+NombrePropietario: mariana
+------------------------------------------------------
+GUID: f0d5457f-7c43-4454-b0ed-df0bb2ffc7a2
+TipoVehiculo: 1
+Marca: tapitas
+Color: gris
+Valor: 4.5000007E7
+CedulaPropietario: 1234
+NombrePropietario: mariana
+------------------------------------------------------ 
+GUID: f0d5457f-7c43-4454-b0ed-df0bb2ffc7a3
+TipoVehiculo: 1
+Marca: tapitas
+Color: gris
+Valor: 4.5000007E7
+CedulaPropietario: 1234
+NombrePropietario: mariana
+------------------------------------------------------ 7c43 
