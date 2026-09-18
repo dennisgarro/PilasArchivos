@@ -37,4 +37,18 @@ public class Metodos {
         }
         return p;
     }
+
+    public void MostrarPila(Stack<Obj> pila) {
+        if (pila.isEmpty()) {
+            System.out.println("La pila está vacía");
+            return;
+        }
+
+        System.out.println("Contenido de la pila:");
+
+        for (Obj o : pila) {
+            System.out.println(o.getNumero());
+        }
+    }
+
 }
