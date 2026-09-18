@@ -3,18 +3,27 @@ package Archivos;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.LinkedList;
+import java.util.Stack;
+import java.util.UUID;
+
+import Modelo.Objeto;
 
 public class Exportar {
-    public void exportarArchivo(LinkedList<obj> lista) {
-        if (lista.isEmpty()) {
+    public void exportarArchivo(Stack<Objeto> p) {
+        if (p.isEmpty()) {
             System.out.println("La lista esta vacia no se puede exportar el archivo");
             return;
         } else {
             try (FileWriter e = new FileWriter("Estudiantes.txt")) {
-                for (obj obj : lista) {
-                    e.write("Nombre: " + obj.getNombre() + "\n");
-                    e.write("Carnet: " + obj.getCarnet() + "\n");
-                    e.write("Cedula: " + obj.getCedula() + "\n");
+                for (Objeto obj : p) {
+                    e.write("GUID: " + obj.getId() + "\n");
+                    e.write("TipoVehiculo: " + obj.getTipoVehiculo() + "\n");
+                    e.write("Marca: " + obj.getMarca() + "\n");
+                    e.write("Color: " + obj.getColor() + "\n");
+                    e.write("Valor: " + obj.getValor() + "\n");
+                    e.write("CedulaPropietario: " + obj.getCedulaPropietario() + "\n");
+                    e.write("NombrePropietario: " + obj.getNombrePropietario() + "\n");
+
                     e.write("------------------------------------------------------ \n");
 
                 }
