@@ -1,5 +1,6 @@
 package Vista;
 
+import java.util.Queue;
 import java.util.Scanner;
 import java.util.Stack;
 import Modelo.Objeto;
@@ -9,7 +10,7 @@ import java.util.UUID;
 public class Metodos {
     Scanner sc = new Scanner(System.in);
 
-    public Stack<Objeto> LLenarDatos(Stack<Objeto> p) {
+    public Queue<Objeto> LLenarDatos(Queue<Objeto> p) {
         boolean continuar = true;
         Validaciones v = new Validaciones();
         while (continuar) {
@@ -27,7 +28,7 @@ public class Metodos {
             o.setCedulaPropietario(sc.next());
             System.out.println("Ingrese el nombre del propietario");
             o.setNombrePropietario(sc.next());
-            p.push(o);
+            p.offer(o);
             System.out.println("Desea seguir ingresando valores 1) si 2) no");
             int opt = v.ValidarEntero(sc);
             if (opt == 2) {
@@ -38,7 +39,7 @@ public class Metodos {
         return p;
     }
 
-    public void MostrarPila(Stack<Objeto> pila) {
+    public void MostrarPila(Queue<Objeto> pila) {
         if (pila.isEmpty()) {
             System.out.println("La pila está vacía");
             return;
@@ -46,8 +47,8 @@ public class Metodos {
 
         System.out.println("Contenido de la pila:");
 
-        for (Obj o : pila) {
-            System.out.println(o.getNumero());
+        for (Objeto o : pila) {
+            System.out.println(o.getCedulaPropietario());
         }
     }
 

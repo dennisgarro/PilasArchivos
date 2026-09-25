@@ -3,13 +3,14 @@ package Archivos;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 import java.util.UUID;
 
 import Modelo.Objeto;
 
 public class Exportar {
-    public void exportarArchivo(Stack<Objeto> p) {
+    public void exportarArchivo(Queue<Objeto> p) {
         if (p.isEmpty()) {
             System.out.println("La lista esta vacia no se puede exportar el archivo");
             return;
